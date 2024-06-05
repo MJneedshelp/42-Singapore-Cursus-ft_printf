@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   testmain.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
+/*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/04 22:22:43 by mintan            #+#    #+#             */
-/*   Updated: 2024/06/05 20:50:57 by mintan           ###   ########.fr       */
+/*   Created: 2024/06/05 20:55:34 by mintan            #+#    #+#             */
+/*   Updated: 2024/06/05 21:06:03 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "include/ft_printf.h"
 
-# include <stdarg.h>
-# include <unistd.h>
-# include "../libft/libft.h"
+int	main(void)
+{
+	ft_printf("test1");
+	return (0);
 
-int		ft_printf(const char *str, ...);
-
-
-
-#endif
+}

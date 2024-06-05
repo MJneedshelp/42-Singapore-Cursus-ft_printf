@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 22:26:42 by mintan            #+#    #+#             */
-/*   Updated: 2024/06/04 22:26:42 by mintan           ###   ########.fr       */
+/*   Updated: 2024/06/05 20:54:56 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 */
 
 #include "../include/ft_printf.h"
-#include "../libft/libft.h"
+//#include "../libft/libft.h"
 #include<stdio.h>
 
 int		ft_printf(const char *str, ...)
@@ -44,7 +44,7 @@ int		ft_printf(const char *str, ...)
 	return (n);
 }
 
-
+/*
 int	main(void)
 {
 	int	ret;
@@ -55,3 +55,4 @@ int	main(void)
 	test = printf("");
 	printf("No.: %d\n", test);
 }
+*/
