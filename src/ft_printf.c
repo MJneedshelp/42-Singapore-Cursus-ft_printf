@@ -20,16 +20,23 @@
 int		ft_printf(const char *str, ...)
 {
 	//probably some variadic function thingy here
+	//probbaly need to check if the number of variadic items in the list match the number of % signs. behaviour if more % than args
 	int		n;
 	//Declares pointer to argument list
 	va_list	ptr;
+	size_t	len;
 
-	n = 1;
+	n = 0;
+	len = ft_strlen(str);
 
 	va_start(ptr, str);
 
-	printf("%s\n", str);
-	printf("%s\n", va_arg(ptr, const char *));
+	//printf("%s\n", str);
+	while (n < 3)
+	{
+		printf("%s\n", va_arg(ptr, const char *));
+		n++;
+	}
 
 
 	va_end(ptr);
@@ -41,7 +48,10 @@ int		ft_printf(const char *str, ...)
 int	main(void)
 {
 	int	ret;
-	ret = ft_printf("test1", "test2");
-	printf("Return: %d\n", ret);
+	int	test;
 
+	ret = ft_printf("test1", "test2", "test3", "test4");
+	printf("Return: %d\n", ret);
+	test = printf("");
+	printf("No.: %d\n", test);
 }

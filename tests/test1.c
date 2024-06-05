@@ -20,7 +20,7 @@ int main() {
 	void	*ptr;
 
 
-	
+
     printf("|%10d|\n", number);  // Right-justified, width 10
     printf("|%-10d|\n", number); // Left-justified, width 10
     printf("|%+10d|\n", number); // Right-justified with sign, width 10
@@ -32,7 +32,7 @@ int main() {
     printf("|%010.2f|\n", pi);   // Zero-padded, width 10, 2 decimal places
     printf("|%+10.2f|\n", pi);   // Right-justified with sign, width 10, 2 decimal places
 	printf("|%+10.4f|\n\n", pi);   // Right-justified with sign, width 10, 4 decimal places
-	
+
 	ptr = &c;
 	printf("Char: %c\n", c);					// Print char
 	printf("Str: %s\n", str);					// Print str
@@ -52,6 +52,7 @@ int main() {
 
 
 	printf("Percentage sign: %%\n");		// Print % sign
+	printf("test unmatched %s, %s, %s, %s\n", "t1", "t2", "t3");
 
 
 
