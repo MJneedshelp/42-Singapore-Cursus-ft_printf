@@ -50,13 +50,9 @@ static	int	format_chk(char c, va_list ptr)
 
 	}
 	else if (c == 'x')
-	{
-
-	}
+		ret += ft_puthexa(va_arg(ptr, int), "0123456789abcdef");
 	else if (c == 'X')
-	{
-
-	}
+		ret += ft_puthexa(va_arg(ptr, int), "0123456789ABCDEF");
 	else if (c == '%')
 		ret += ft_putchar(c);
 	else
