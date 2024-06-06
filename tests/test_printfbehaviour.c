@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test1.c                                            :+:      :+:    :+:   */
+/*   test_printfbehaviour.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -52,9 +52,8 @@ int main() {
 
 
 	printf("Percentage sign: %%\n");		// Print % sign
-	printf("test unmatched %s, %s, %s, %s\n", "t1", "t2", "t3");
-
-
+	//printf("test unmatched %s, %s, %s, %s\n", "t1", "t2", "t3");
+	printf("%\n");
 
     return 0;
 }
