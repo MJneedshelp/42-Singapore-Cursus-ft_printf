@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 22:26:42 by mintan            #+#    #+#             */
-/*   Updated: 2024/06/06 13:41:52 by mintan           ###   ########.fr       */
+/*   Updated: 2024/06/06 17:53:00 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 /* Description: writes a character 
  */
-static	int	ft_putchar(char c)
+int	ft_putchar(char c)
 {
 	write(1, &c, 1);
 	return (1);
@@ -45,7 +45,8 @@ static	int	format_chk(char c, va_list ptr)
 	}
 	else if (c == 'd' || c == 'i')
 	{
-
+		ret += ft_putnbr(va_arg(ptr, int));
+		printf("inside format chk: %d\n", ret);
 	}
 	else if (c == 'u')
 	{
@@ -100,7 +101,9 @@ int		ft_printf(const char *str, ...)
 				//probably should check for weird cases like "%"
 			//increment i by 2
 			//printf("%s\n", va_arg(ptr, const char *));
+			printf("before format checker: %d\n", ret);
 			ret += format_chk(str[i + 1], ptr);
+			printf("after format checker: %d\n", ret);
 			i = i + 2;
 		}
 		else

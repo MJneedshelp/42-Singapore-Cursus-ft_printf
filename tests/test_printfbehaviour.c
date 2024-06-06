@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 00:48:41 by mintan            #+#    #+#             */
-/*   Updated: 2024/06/04 17:55:25 by mintan           ###   ########.fr       */
+/*   Updated: 2024/06/06 14:38:44 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int main() {
 	char 	c = 'C';
 	char	*str = "this is a string";
 	void	*ptr;
+	int		min = -2147483648;
+	int		max = 2147483647;
 
 
 
@@ -45,15 +47,29 @@ int main() {
 	printf("Unsigned dec: %u\n", -3);			// Print an unsigned decimal (base 10) number
 	printf("Unsigned dec: %u\n", -2147483647);	// Print an unsigned decimal (base 10) number
 
+	printf("Dec: %d\n", number);				// Print decimal (base 10) number
+	printf("Dec: %d\n", number);				// Print decimal (base 10) number
+	printf("Dec: %d\n", number);				// Print decimal (base 10) number
+	printf("Dec: %d\n", number);				// Print decimal (base 10) number
+
+
+
+
 
 	printf("Hex lowercase: %x\n", 127);		// Print hexadecimal (base 16) lowercase
 	printf("Hex uppercase: %X\n", 127);		// Print hexadecimal (base 16) uppercase
 	printf("Hex uppercase: %X\n", 127);		// Print hexadecimal (base 16) uppercase
 
-
 	printf("Percentage sign: %%\n");		// Print % sign
 	//printf("test unmatched %s, %s, %s, %s\n", "t1", "t2", "t3");
-	printf("%\n");
+	printf("Dec: %d\n", max);
+	printf("Int: %i\n", max);
+	printf("Dec: %d\n", min);
+	printf("Int: %i\n", min);
+	printf("Dec: %d\n", max + 1);
+	printf("Int: %i\n", max + 1);
+	printf("Dec: %d\n", min - 1);
+	printf("Int: %i\n", min - 1);
 
     return 0;
 }
