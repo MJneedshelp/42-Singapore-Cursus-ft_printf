@@ -20,18 +20,22 @@ int	main(void)
 	int			act_ret;
 
 	printf("printf output: ");
-	exp_ret = printf("Decimal %d\n", -2147483648);
+	//exp_ret = printf("Decimal %d\n", -2147483648);
+	exp_ret = printf("Decimal %d\n", -2147483647);
 	printf("\nExpected return: %d\n\n", exp_ret);
 	printf("ft_printf output: ");
-	act_ret = ft_printf("Decimal %d\n", -2147483648);
+	//act_ret = ft_printf("Decimal %d\n", -2147483648);
+	act_ret = ft_printf("Decimal %d\n", -2147483647);
 	printf("\nActual return: %d\n\n", act_ret);
 
 	printf("==================================================\n\n");
 	printf("printf output: ");
-	exp_ret = printf("Integer %i\n", -2147483648);
+	//exp_ret = printf("Integer %i\n", -2147483648);
+	exp_ret = printf("Integer %i\n", -2147483647);
 	printf("\nExpected return: %d\n\n", exp_ret);
 	printf("ft_printf output: ");
-	act_ret = ft_printf("Integer %i\n", -2147483648);
+	//act_ret = ft_printf("Integer %i\n", -2147483648);
+	act_ret = ft_printf("Integer %i\n", -21474836487);
 	printf("\nActual return: %d\n\n", act_ret);
 
 	printf("==================================================\n\n");

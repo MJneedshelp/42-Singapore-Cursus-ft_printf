@@ -16,7 +16,7 @@
 #include "../include/ft_printf.h"
 #include "../libft/libft.h"
 
-/* Description: writes a character 
+/* Description: writes a character
  */
 int	ft_putchar(char c)
 {
@@ -44,10 +44,7 @@ static	int	format_chk(char c, va_list ptr)
 
 	}
 	else if (c == 'd' || c == 'i')
-	{
 		ret += ft_putnbr(va_arg(ptr, int));
-		printf("inside format chk: %d\n", ret);
-	}
 	else if (c == 'u')
 	{
 
@@ -101,9 +98,7 @@ int		ft_printf(const char *str, ...)
 				//probably should check for weird cases like "%"
 			//increment i by 2
 			//printf("%s\n", va_arg(ptr, const char *));
-			printf("before format checker: %d\n", ret);
 			ret += format_chk(str[i + 1], ptr);
-			printf("after format checker: %d\n", ret);
 			i = i + 2;
 		}
 		else

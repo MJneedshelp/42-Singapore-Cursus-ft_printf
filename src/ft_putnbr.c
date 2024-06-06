@@ -15,33 +15,30 @@
 
 //Probably needs some logic to handle more than max min int
 
-static	int	ft_putlongnbr(long l)
+static	void	ft_putlongnbr(long l, int *count)
 {
-	static int	count;
 	char		c;
 
-	count = 0;
 	if (l < 0)
 	{
 		ft_putchar('-');
-		ft_putlongnbr(-l);
-		count++;
+		(*count)++;
+		ft_putlongnbr(-l, count);
 	}
 	else if (l > 9)
 	{
-		ft_putlongnbr(l / 10);
-		ft_putlongnbr(l % 10);
+		ft_putlongnbr(l / 10, count);
+		ft_putlongnbr(l % 10, count);
 	}
 	else
 	{
 		c = l + 48;
-		count++;
 		ft_putchar(c);
+		(*count)++;
 	}
-	return (count);
 }
 
-/* Description: converts an integer into a string and writes the string. 
+/* Description: converts an integer into a string and writes the string.
    Returns the string length */
 int	ft_putnbr(int n)
 {
@@ -50,6 +47,6 @@ int	ft_putnbr(int n)
 
 	ret = 0;
 	l = (long)n;
-	ret = ft_putlongnbr(l);
+	ft_putlongnbr(l, &ret);
 	return (ret);
 }
