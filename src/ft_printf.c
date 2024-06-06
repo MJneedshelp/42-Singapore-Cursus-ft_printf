@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 22:26:42 by mintan            #+#    #+#             */
-/*   Updated: 2024/06/05 20:54:56 by mintan           ###   ########.fr       */
+/*   Updated: 2024/06/06 13:41:52 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,56 @@
 #include "../include/ft_printf.h"
 #include "../libft/libft.h"
 
+/* Description: writes a character 
+ */
 static	int	ft_putchar(char c)
 {
 	write(1, &c, 1);
 	return (1);
+}
+
+/* Description:
+
+   */
+static	int	format_chk(char c, va_list ptr)
+{
+	//if else condition for all the different format types
+	//probably can remove all the {} later
+	//return -1 if not in the correct percentage
+	int	ret;
+
+	ret = 0;
+	if (c == 'c')
+		ret += ft_putchar(va_arg(ptr, int));
+	else if (c == 's')
+		ret += ft_putstr(va_arg(ptr, char *));
+	else if (c == 'p')
+	{
+
+	}
+	else if (c == 'd' || c == 'i')
+	{
+
+	}
+	else if (c == 'u')
+	{
+
+	}
+	else if (c == 'x')
+	{
+
+	}
+	else if (c == 'X')
+	{
+
+	}
+	else if (c == '%')
+		ret += ft_putchar(c);
+	else
+	{
+		//return -1?
+	}
+	return (ret);
 }
 
 /* Description: Attempts to replicate the real printf function. Handles the
@@ -36,7 +82,6 @@ static	int	ft_putchar(char c)
    */
 int		ft_printf(const char *str, ...)
 {
-	//probably some variadic function thingy here
 	//probbaly need to check if the number of variadic items in the list match the number of % signs. behaviour if more % than args
 	int		ret;
 	int		i;
@@ -49,13 +94,18 @@ int		ft_printf(const char *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			//some function that takes in ptr - the current item in the va list 
-			//each function should perform the writing action and return the len of the str so that it can be incremented here
+			//some function that takes in ptr - the current item in the va list and returns the len of converted string
+				//sub functions inside to write the different conversions
+					//each function should perform the writing action and return the len of the str so that it can be incremented here
+				//probably should check for weird cases like "%"
+			//increment i by 2
 			//printf("%s\n", va_arg(ptr, const char *));
+			ret += format_chk(str[i + 1], ptr);
+			i = i + 2;
 		}
 		else
 		{
-			ret = ret + ft_putchar(str[i]);
+			ret += ft_putchar(str[i]);
 			i++;
 		}
 	}

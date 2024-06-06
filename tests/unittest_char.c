@@ -1,45 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   maintest.c                                         :+:      :+:    :+:   */
+/*   unittest_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 07:33:00 by mintan            #+#    #+#             */
-/*   Updated: 2024/06/06 09:00:40 by mintan           ###   ########.fr       */
+/*   Updated: 2024/06/06 12:20:41 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Description: combine all the unit tests here and compile this file with the
-   libftprintf.a file
-*/
-
 #include"../include/ft_printf.h"
-#include <stdio.h>
 
 int	main(void)
 {
-	printf("==========Test: Plain string. No extra arguments.==========\n\n");
+	printf("==========Test: char. No extra arguments.==========\n\n");
 
-	const char	*str1;
-	const char	*str2;
 	int			exp_ret;
 	int			act_ret;
 
-	str1 = "hello";
 	printf("printf output: ");
-	exp_ret = printf(str1);
+	exp_ret = printf("Hello %c", 't');
 	printf("\nExpected return: %d\n\n", exp_ret);
 	printf("ft_printf output: ");
-	act_ret = ft_printf(str1);
+	act_ret = ft_printf("Hello %c", 't');
 	printf("\nActual return: %d\n\n", act_ret);
 
 	printf("==================================================\n\n");
-	str2 = "";
 	printf("printf output: ");
-	exp_ret = printf(str2);
+	exp_ret = printf("%c Hello %c", 't', 'i');
 	printf("\nExpected return: %d\n\n", exp_ret);
 	printf("ft_printf output: ");
-	act_ret = ft_printf(str2);
+	act_ret = ft_printf("%c Hello %c", 't', 'i');
 	printf("\nActual return: %d\n\n", act_ret);
 }

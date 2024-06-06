@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/04 22:22:43 by mintan            #+#    #+#             */
-/*   Updated: 2024/06/06 12:25:52 by mintan           ###   ########.fr       */
+/*   Created: 2024/06/04 22:26:42 by mintan            #+#    #+#             */
+/*   Updated: 2024/06/06 13:41:37 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "../include/ft_printf.h"
+#include "../libft/libft.h"
 
-# include<stdio.h>			//remove later
-# include <stdarg.h>
-# include <unistd.h>
-# include "../libft/libft.h"
+/* Description: writes a string and returns the string length */
+int	ft_putstr(char *str)
+{
+	int	ret;
 
-int		ft_printf(const char *str, ...);
-int		ft_putstr(char *str);
-
-#endif
+	ret = 0;
+	while (str[ret] != '\0')
+	{
+		write(1, &str[ret], 1);
+		ret++;
+	}
+	return (ret);
+}
