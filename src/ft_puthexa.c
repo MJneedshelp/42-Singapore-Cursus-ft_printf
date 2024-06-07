@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 22:26:42 by mintan            #+#    #+#             */
-/*   Updated: 2024/06/06 17:52:25 by mintan           ###   ########.fr       */
+/*   Updated: 2024/06/07 20:40:35 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static	void	ft_putlonghexa(long l, int *count, char *base)
 /* Description: converts an integer into a hexadecimal string and
    writes the string. Uses either the uppercase or lowercase base.
    Returns the string length */
-int	ft_puthexa(int n, char *base)
+int	ft_puthexa(unsigned int n, char *base)
 {
 	int		ret;
 	long	l;
