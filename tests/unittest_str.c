@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 07:33:00 by mintan            #+#    #+#             */
-/*   Updated: 2024/06/06 13:41:27 by mintan           ###   ########.fr       */
+/*   Updated: 2024/06/07 19:52:59 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,13 @@ int	main(void)
 	printf("\nExpected return: %d\n\n", exp_ret);
 	printf("ft_printf output: ");
 	act_ret = ft_printf("%s Hello %s", "Hi", "world");
+	printf("\nActual return: %d\n\n", act_ret);
+
+	printf("==================================================\n\n");
+	printf("printf output: ");
+	exp_ret = printf("Hello %s", NULL);
+	printf("\nExpected return: %d\n\n", exp_ret);
+	printf("ft_printf output: ");
+	act_ret = ft_printf("Hello %s", NULL);
 	printf("\nActual return: %d\n\n", act_ret);
 }

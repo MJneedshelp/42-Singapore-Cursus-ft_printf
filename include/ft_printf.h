@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 22:22:43 by mintan            #+#    #+#             */
-/*   Updated: 2024/06/06 16:32:28 by mintan           ###   ########.fr       */
+/*   Updated: 2024/06/07 19:34:37 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int		ft_printf(const char *str, ...);
 int		ft_putchar(char c);
 int		ft_putstr(char *str);
 int		ft_putnbr(int n);
-int		ft_puthexa(int n, char *base)
+int		ft_puthexa(int n, char *base);
 
 #endif
