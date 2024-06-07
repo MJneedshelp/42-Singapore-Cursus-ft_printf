@@ -29,8 +29,8 @@ int	ft_putchar(char c)
    */
 static	int	format_chk(char c, va_list ptr)
 {
-	//if else condition for all the different format types
-	//probably can remove all the {} later
+	//if else condition for all the different format types -> done
+	//probably can remove all the {} later -> done
 	//return -1 if not in the correct percentage
 	int	ret;
 
@@ -40,9 +40,7 @@ static	int	format_chk(char c, va_list ptr)
 	else if (c == 's')
 		ret += ft_putstr(va_arg(ptr, char *));
 	else if (c == 'p')
-	{
-
-	}
+		ret += ft_putptr(va_arg(ptr, unsigned long), "0123456789abcdef");
 	else if (c == 'd' || c == 'i')
 		ret += ft_putnbr(va_arg(ptr, int));
 	else if (c == 'u')

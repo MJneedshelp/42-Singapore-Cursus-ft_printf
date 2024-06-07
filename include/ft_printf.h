@@ -24,6 +24,7 @@ int		ft_putstr(char *str);
 int		ft_putnbr(int n);
 int		ft_puthexa(unsigned int n, char *base);
 int		ft_putunsignednbr(unsigned int n);
+int		ft_putptr(unsigned long l, char *base)
 
 void	ft_putlongnbr(long l, int *count);
 
