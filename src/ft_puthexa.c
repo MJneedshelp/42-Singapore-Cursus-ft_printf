@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 22:26:42 by mintan            #+#    #+#             */
-/*   Updated: 2024/06/07 20:40:35 by mintan           ###   ########.fr       */
+/*   Updated: 2024/06/07 21:25:28 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,7 @@
 
 static	void	ft_putlonghexa(long l, int *count, char *base)
 {
-	if (l < 0)
-	{
-		ft_putchar('-');
-		(*count)++;
-		ft_putlonghexa(-l, count, base);
-	}
-	else if (l > 15)
+	if (l > 15)
 	{
 		ft_putlonghexa(l / 16, count, base);
 		ft_putlonghexa(l % 16, count, base);

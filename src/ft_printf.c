@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 22:26:42 by mintan            #+#    #+#             */
-/*   Updated: 2024/06/07 20:37:39 by mintan           ###   ########.fr       */
+/*   Updated: 2024/06/07 21:45:28 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,7 @@ static	int	format_chk(char c, va_list ptr)
 	else if (c == 'd' || c == 'i')
 		ret += ft_putnbr(va_arg(ptr, int));
 	else if (c == 'u')
-	{
-
-	}
+		ret += ft_putunsignednbr(va_arg(ptr, unsigned int));
 	else if (c == 'x')
 		ret += ft_puthexa(va_arg(ptr, unsigned int), "0123456789abcdef");
 	else if (c == 'X')

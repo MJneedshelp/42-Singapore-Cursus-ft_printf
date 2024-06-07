@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putunsignednbr.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 22:26:42 by mintan            #+#    #+#             */
-/*   Updated: 2024/06/07 21:25:15 by mintan           ###   ########.fr       */
+/*   Updated: 2024/06/07 21:26:05 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 #include "../libft/libft.h"
 
-/* Description: uses a long, which covers all min and max int and before
-   converting it to a character.
-*/
-
+/*
 void	ft_putlongnbr(long l, int *count)
 {
 	char		c;
@@ -39,10 +36,12 @@ void	ft_putlongnbr(long l, int *count)
 		(*count)++;
 	}
 }
+*/
 
-/* Description: converts an integer into a string and writes the string.
-   Returns the string length */
-int	ft_putnbr(int n)
+/* Description: converts an unsigned integer into a string and
+   writes the string. Returns the string length */
+
+int	ft_putunsignednbr(unsigned int n)
 {
 	int		ret;
 	long	l;

@@ -6,11 +6,12 @@
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 00:48:41 by mintan            #+#    #+#             */
-/*   Updated: 2024/06/06 14:38:44 by mintan           ###   ########.fr       */
+/*   Updated: 2024/06/07 22:03:49 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <limits.h>
 
 int main() {
     int		number = 123;
@@ -52,16 +53,16 @@ int main() {
 	printf("Dec: %d\n", number);				// Print decimal (base 10) number
 	printf("Dec: %d\n", number);				// Print decimal (base 10) number
 
-
-
-
-
-	printf("Hex lowercase: %x\n", 127);		// Print hexadecimal (base 16) lowercase
-	printf("Hex uppercase: %X\n", 127);		// Print hexadecimal (base 16) uppercase
-	printf("Hex uppercase: %X\n", 127);		// Print hexadecimal (base 16) uppercase
+	printf("Hex lowercase: %x\n", 127);			// Print hexadecimal (base 16) lowercase
+	printf("Hex uppercase: %X\n", 127);			// Print hexadecimal (base 16) uppercase
+	printf("Hex uppercase: %X\n", 127);			// Print hexadecimal (base 16) uppercase
 
 	printf("Percentage sign: %%\n");		// Print % sign
 	//printf("test unmatched %s, %s, %s, %s\n", "t1", "t2", "t3");
+	
+	printf("Ptr as ld: %lld\n", &c);				// Print address as ld
+	printf("Long long: %lld\n", LONG_MAX);
+	/*	
 	printf("Dec: %d\n", max);
 	printf("Int: %i\n", max);
 	printf("Dec: %d\n", min);
@@ -70,6 +71,6 @@ int main() {
 	printf("Int: %i\n", max + 1);
 	printf("Dec: %d\n", min - 1);
 	printf("Int: %i\n", min - 1);
-
+	*/
     return 0;
 }
