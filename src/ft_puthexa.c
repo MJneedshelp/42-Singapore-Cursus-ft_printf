@@ -6,14 +6,16 @@
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 22:26:42 by mintan            #+#    #+#             */
-/*   Updated: 2024/06/07 21:25:28 by mintan           ###   ########.fr       */
+/*   Updated: 2024/06/08 21:03:39 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 #include "../libft/libft.h"
 
-//Probably needs some logic to handle more than max min int
+/* Description: takes in the hexadecimal base, a long, and converts it into 
+   a hexadecimal. Increments the value stored in the address of the count and
+   returns it.  */
 
 static	void	ft_putlonghexa(long l, int *count, char *base)
 {
@@ -31,7 +33,8 @@ static	void	ft_putlonghexa(long l, int *count, char *base)
 
 /* Description: converts an integer into a hexadecimal string and
    writes the string. Uses either the uppercase or lowercase base.
-   Returns the string length */
+   Returns the string length. */
+
 int	ft_puthexa(unsigned int n, char *base)
 {
 	int		ret;

@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 00:48:41 by mintan            #+#    #+#             */
-/*   Updated: 2024/06/07 22:03:49 by mintan           ###   ########.fr       */
+/*   Updated: 2024/06/08 21:43:48 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,10 @@ int main() {
 	printf("Hex uppercase: %X\n", 127);			// Print hexadecimal (base 16) uppercase
 	printf("Hex uppercase: %X\n", 127);			// Print hexadecimal (base 16) uppercase
 
-	printf("Percentage sign: %%\n");		// Print % sign
+	printf("Percentage sign: %%\n");			// Print % sign
+	printf("Check value for invalid: %d\n",printf("test %"));	// Test invalid specifier
+
+
 	//printf("test unmatched %s, %s, %s, %s\n", "t1", "t2", "t3");
 	
 	printf("Ptr as ld: %lld\n", &c);				// Print address as ld

@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 22:26:42 by mintan            #+#    #+#             */
-/*   Updated: 2024/06/07 21:25:15 by mintan           ###   ########.fr       */
+/*   Updated: 2024/06/08 20:59:48 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 #include "../libft/libft.h"
 
 /* Description: uses a long, which covers all min and max int and before
-   converting it to a character.
-*/
+   converting it to a character. */
 
 void	ft_putlongnbr(long l, int *count)
 {
