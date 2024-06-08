@@ -46,6 +46,41 @@ static	int	format_chk(char c, va_list ptr)
 	return (ret);
 }
 
+/* Description: checks for format specifiers that are invalid. Returns a
+   -1 if there are invalid format specifiers. */
+static	int	checkspecifier(const char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] == '%')
+		{
+			if (str[i + 1] == 'c')
+				;
+			else if (str[i + 1] == 'p')
+				;
+			else if (str[i + 1] == 'd')
+				;
+			else if (str[i + 1] == 'i')
+				;
+			else if (str[i + 1] == 'u')
+				;
+			else if (str[i + 1] == 'x')
+				;
+			else if (str[i + 1] == 'X')
+				;
+			else if (str[i + 1] == '%')
+				;
+			else
+				return (-1);
+		}
+		i++;
+	}
+	return (1);
+}
+
 /* Description: Attempts to replicate the real printf function. Handles the
    cspdiuxX% conversion:
    - %c: single character
@@ -65,6 +100,8 @@ int	ft_printf(const char *str, ...)
 
 	ret = 0;
 	i = 0;
+	if (checkspecifier(str) == -1)
+		return (-1);
 	va_start(ptr, str);
 	while (str[i] != '\0')
 	{
@@ -82,8 +119,3 @@ int	ft_printf(const char *str, ...)
 	va_end(ptr);
 	return (ret);
 }
-
-/*probably need to check if the number of variadic items in the list 
-  match the number of % signs. behaviour if more % than args
-  check for cases like only % and return error
-  check for invalid specifiers and return -1 at the start */
