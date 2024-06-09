@@ -14,7 +14,7 @@
 
 int	main(void)
 {
-	printf("==========Test: char. No extra arguments.==========\n\n");
+	printf("==========Test: char==========\n\n");
 
 	int			exp_ret;
 	int			act_ret;

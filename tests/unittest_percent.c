@@ -14,7 +14,7 @@
 
 int	main(void)
 {
-	printf("==========Test: Percent sign %%. No extra arguments.==========\n\n");
+	printf("==========Test: Percent sign %%==========\n\n");
 
 	int			exp_ret;
 	int			act_ret;
