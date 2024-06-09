@@ -35,6 +35,7 @@ $(NAME): $(OBJECTS) $(LIBDIR)/libft.a
 # Rule to create the OBJECTS
 # "<" > Prerequisites
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
+	mkdir -p $(OBJDIR)
 	$(CC) $(CFLAGS) $< -o $@
 
 # Rule to create libft.a. CD into the libft folder and trigger the makefile
@@ -44,6 +45,7 @@ $(LIBDIR)/libft.a:
 # Clear the build files
 clean:
 	rm -f $(OBJECTS)
+	rm $(OBJDIR)
 	cd $(LIBDIR) && make clean
 
 fclean: clean
