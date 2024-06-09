@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 22:26:42 by mintan            #+#    #+#             */
-/*   Updated: 2024/06/08 21:48:14 by mintan           ###   ########.fr       */
+/*   Updated: 2024/06/09 11:47:29 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,22 +57,18 @@ static	int	checkspecifier(const char *str)
 	{
 		if (str[i] == '%')
 		{
-			if (str[i + 1] == 'c')
+			if (str[i + 1] == 'c' || str[i + 1] == 's')
 				;
 			else if (str[i + 1] == 'p')
 				;
-			else if (str[i + 1] == 'd')
-				;
-			else if (str[i + 1] == 'i')
+			else if (str[i + 1] == 'd' || str[i + 1] == 'i')
 				;
 			else if (str[i + 1] == 'u')
 				;
-			else if (str[i + 1] == 'x')
-				;
-			else if (str[i + 1] == 'X')
+			else if (str[i + 1] == 'x' || str[i +1] == 'X')
 				;
 			else if (str[i + 1] == '%')
-				;
+				i++;
 			else
 				return (-1);
 		}

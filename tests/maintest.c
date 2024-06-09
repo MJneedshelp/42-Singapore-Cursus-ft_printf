@@ -6,7 +6,7 @@
 /*   By: mintan <mintan@student.42singapore.sg>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 07:33:00 by mintan            #+#    #+#             */
-/*   Updated: 2024/06/06 09:00:40 by mintan           ###   ########.fr       */
+/*   Updated: 2024/06/09 12:54:17 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -230,5 +230,14 @@ int	main(void)
 	printf("==================================================\n\n");
 	printf("ft_printf output: ");
 	act_ret = ft_printf("Hello %o ", 't');
+	printf("\nActual return: %d\n\n", act_ret);
+
+	printf("==========Test: mixed==========\n\n");
+
+	printf("printf output: ");
+	exp_ret = printf("Hello %%%c %s %p %d %i %u %x %X", 'c', "world", &n, 42, 42 ,-42, 42, 42);
+	printf("\nExpected return: %d\n\n", exp_ret);
+	printf("ft_printf output: ");
+	act_ret = ft_printf("Hello %%%c %s %p %d %i %u %x %X", 'c', "world", &n, 42, 42 ,-42, 42, 42);
 	printf("\nActual return: %d\n\n", act_ret);
 }
