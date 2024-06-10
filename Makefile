@@ -6,22 +6,21 @@
 #    By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/15 22:10:59 by mintan            #+#    #+#              #
-#    Updated: 2024/06/09 11:56:57 by mintan           ###   ########.fr        #
+#    Updated: 2024/06/10 21:50:34 by mintan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Compiler + compile flags
 CC = cc
 CFLAGS = -Wall -Werror -Wextra -c
-# LDFLAG = -l$(LIBDIR)
 
 # Definitions
 NAME = libftprintf.a
 SRCDIR = src
-OBJDIR = obj
 LIBDIR = libft
 SOURCES = $(wildcard $(SRCDIR)/*.c)
-OBJECTS = $(addprefix $(OBJDIR)/, $(notdir $(SOURCES:.c=.o)))
+OBJECTS = $(SOURCES:.c=.o)
+
 
 # Target to make using Make all
 all: $(NAME)
@@ -34,8 +33,7 @@ $(NAME): $(OBJECTS) $(LIBDIR)/libft.a
 
 # Rule to create the OBJECTS
 # "<" > Prerequisites
-$(OBJDIR)/%.o: $(SRCDIR)/%.c
-	mkdir -p $(OBJDIR)
+%.o: %.c
 	$(CC) $(CFLAGS) $< -o $@
 
 # Rule to create libft.a. CD into the libft folder and trigger the makefile
@@ -45,7 +43,6 @@ $(LIBDIR)/libft.a:
 # Clear the build files
 clean:
 	rm -f $(OBJECTS)
-	rm $(OBJDIR)
 	cd $(LIBDIR) && make clean
 
 fclean: clean
